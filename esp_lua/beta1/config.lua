@@ -1,11 +1,12 @@
-wifi.setmode(wifi.SOFTAP);
-wifi.ap.config({ssid="slamp",pwd="12345678"});
+wifi.setmode(wifi.SOFTAP); -- переводим модуль в режим "Точка доступа"
+wifi.ap.config({ssid="slamp",pwd="12345678"}); --параметры Wi-Fi сети
+-- вывод в консоль информации для подключения к модулю
 print("WiFi AP (ssid=slamp/key=12345678)");
 print('IP:',wifi.ap.getip());
 print('Mode=AP');
 print('MAC:',wifi.ap.getmac());
 
-srv=net.createServer(net.TCP)
+srv=net.createServer(net.TCP) -- запуск TCP сервера
 srv:listen(80,function(conn) 
     conn:on("receive", function(client,request)        
         local buf = "";

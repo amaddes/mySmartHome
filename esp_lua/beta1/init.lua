@@ -1,5 +1,5 @@
-if file.exists("device.config") then
-    dofile("main.lua")
+if file.exists("device.config") then --если существует файл с настройками
+    dofile("main.lua") -- выполнение основного кода
     else
-    dofile("config.lua")
+    dofile("config.lua") --если, то запуск настройщика
 end
