@@ -10,7 +10,6 @@ var newDevice
 // Определение собственного IP-----------------------
 var os = require('os');
 var ifaces = os.networkInterfaces();
-
 var IP_ADDRESS = ifaces.wlan0[0].address;
 //---------------------------------------------------
 
